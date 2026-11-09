@@ -12,7 +12,7 @@ BATCH = "train"
 if not os.path.exists(MAIN_PATH + "/" + BATCH + "_preprocessed/"):
     os.mkdir(MAIN_PATH + "/" + BATCH + "_preprocessed/")
 
-with open(MAIN_PATH + "/specs.json") as f:
+with open(MAIN_PATH + "/specs.json", encoding="utf-8") as f:
   data = json.load(f)
 
 for item_index, item in tqdm.tqdm(enumerate(data)):
